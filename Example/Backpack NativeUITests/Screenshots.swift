@@ -37,7 +37,6 @@ class Screenshots: XCTestCase {
     }()
 
     override func setUp() {
-        UIApplication.shared.delegate?.window!?.overrideUserInterfaceStyle = .dark
         // Put setup code here. This method is called before the invocation of each test method in the class.
 
         // In UI tests it is usually best to stop immediately when a failure occurs.
@@ -60,11 +59,12 @@ class Screenshots: XCTestCase {
     }
 
     func navigateAndShow() {
+        UIApplication.shared.delegate?.window??.overrideUserInterfaceStyle = .dark
         app.tables.staticTexts["Chips"].tap()
         app.tables.staticTexts["Default"].tap()
     }
 
-    func testTapChipToSelect() {
+    func testTakeScreenshts() {
         XCTContext.runActivity(named: "Navigate") { _ in
             navigateAndShow()
         }
@@ -75,13 +75,5 @@ class Screenshots: XCTestCase {
 
         XCTAssertTrue(belgiumChip.isSelected, "The chip should have been selected when tapped")
         saveScreenshot(named: "Chip selected")
-    }
-
-    func testDisabledChip() {
-        XCTContext.runActivity(named: "Navigate") { _ in
-            navigateAndShow()
-        }
-
-        XCTAssertFalse(afghanistanChip.isEnabled, "The chip should not yet have been selected")
     }
 }

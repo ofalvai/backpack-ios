@@ -22,6 +22,7 @@
 #import <Backpack/Color.h>
 #import <Backpack/Font.h>
 #import <Backpack/Theme.h>
+#import <UITestServer/UITestServer.h>
 
 @import AppCenter;
 @import AppCenterDistribute;
@@ -32,6 +33,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 //    [BPKFont setFontDefinition:[BPKRelativeFontDefinition new]];
+
+    UITestServer *server = [UITestServer sharedInstance];
+    [server listen];
 
     // Override point for customization after application launch.
     [UINavigationBar appearance].tintColor = BPKColor.textPrimaryColor;

@@ -54,7 +54,7 @@
 		76E3453B2360F4D400B5CEA5 /* BPKTextFieldSnapshotTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E345392360F4D400B5CEA5 /* BPKTextFieldSnapshotTest.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		A15061AA3F67A79468DBC7A2 /* Pods_Backpack_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 732AAEEA0C015F6E54AC4148 /* Pods_Backpack_Tests.framework */; };
-		BB36C7EE82AEA4457426F7DE /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
+		BB36C7EE82AEA4457426F7DE /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		D202E168238C1771003E7B23 /* NavigationBarSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D202E167238C1770003E7B23 /* NavigationBarSelectorViewController.swift */; };
 		D2046EB12253FE2A002B7165 /* ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2046EB02253FE2A002B7165 /* ExampleApp.swift */; };
 		D20470402347875900A1BE48 /* BPKExampleAppTitleAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = D204703F2347875900A1BE48 /* BPKExampleAppTitleAttributes.m */; };
@@ -120,6 +120,9 @@
 		D2D624AB231586F600D8ED38 /* PanelSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D624A9231586F500D8ED38 /* PanelSelectorViewController.swift */; };
 		D2D624AC231586F600D8ED38 /* PanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D624AA231586F600D8ED38 /* PanelViewController.swift */; };
 		D2E474AA23A7B6E800DA5DA7 /* Screenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E474A923A7B6E700DA5DA7 /* Screenshots.swift */; };
+		D2E474BD23A7BD4A00DA5DA7 /* UITestServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2E474B123A7BCDB00DA5DA7 /* UITestServer.framework */; };
+		D2E474BE23A7BD4A00DA5DA7 /* UITestServer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D2E474B123A7BCDB00DA5DA7 /* UITestServer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D2E474C023A7BD6B00DA5DA7 /* UITestUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2E474BA23A7BCF100DA5DA7 /* UITestUtils.framework */; };
 		D2FBC4AC236AE68D00331506 /* BPKTextFieldTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D257C76C236AE402006683F5 /* BPKTextFieldTest.m */; };
 		D2FBC4AD236AE69000331506 /* BPKTappableLinkLabelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = D257C76B236AE402006683F5 /* BPKTappableLinkLabelTest.m */; };
 		D2FF309021903B2500E06F96 /* Badges.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2FF308F21903B2500E06F96 /* Badges.storyboard */; };
@@ -181,6 +184,34 @@
 			remoteGlobalIDString = 6003F589195388D20070C39A;
 			remoteInfo = Backpack;
 		};
+		D2E474B023A7BCDB00DA5DA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2E474AB23A7BCDB00DA5DA7 /* UITestServer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CE8C6E951B47DB0A007CF215;
+			remoteInfo = UITestServer;
+		};
+		D2E474B223A7BCDB00DA5DA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2E474AB23A7BCDB00DA5DA7 /* UITestServer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CE8C6E9F1B47DB0A007CF215;
+			remoteInfo = UITestServerTests;
+		};
+		D2E474B923A7BCF100DA5DA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2E474B423A7BCF100DA5DA7 /* UITestUtils.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CE6010291B4746F400773C38;
+			remoteInfo = UITestUtils;
+		};
+		D2E474BB23A7BCF100DA5DA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2E474B423A7BCF100DA5DA7 /* UITestUtils.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CE6010331B4746F400773C38;
+			remoteInfo = UITestUtilsTests;
+		};
 		D6517B44216DF5F800D85FF9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6003F582195388D10070C39A /* Project object */;
@@ -196,6 +227,20 @@
 			remoteInfo = Backpack;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D2E474BF23A7BD4A00DA5DA7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D2E474BE23A7BD4A00DA5DA7 /* UITestServer.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		090E9C65F965012C0DF5C1E3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -333,6 +378,8 @@
 		D2D624A9231586F500D8ED38 /* PanelSelectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanelSelectorViewController.swift; sourceTree = "<group>"; };
 		D2D624AA231586F600D8ED38 /* PanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PanelViewController.swift; sourceTree = "<group>"; };
 		D2E474A923A7B6E700DA5DA7 /* Screenshots.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screenshots.swift; sourceTree = "<group>"; };
+		D2E474AB23A7BCDB00DA5DA7 /* UITestServer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UITestServer.xcodeproj; path = ../UITestUtils/UITestServer/UITestServer.xcodeproj; sourceTree = "<group>"; };
+		D2E474B423A7BCF100DA5DA7 /* UITestUtils.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UITestUtils.xcodeproj; path = ../../UITestUtils/UITestUtils/UITestUtils.xcodeproj; sourceTree = "<group>"; };
 		D2FF308F21903B2500E06F96 /* Badges.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Badges.storyboard; sourceTree = "<group>"; };
 		D613CE542006795400D60CC4 /* BPKColorTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BPKColorTest.m; sourceTree = "<group>"; };
 		D61ACE022306E1E7001C976E /* NavigationBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NavigationBar.storyboard; sourceTree = "<group>"; };
@@ -397,6 +444,7 @@
 			files = (
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
+				D2E474BD23A7BD4A00DA5DA7 /* UITestServer.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
 				006034DBB76C671434F6252A /* Pods_Backpack_Native.framework in Frameworks */,
 			);
@@ -409,7 +457,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				BB36C7EE82AEA4457426F7DE /* BuildFile in Frameworks */,
+				BB36C7EE82AEA4457426F7DE /* (null) in Frameworks */,
 				A15061AA3F67A79468DBC7A2 /* Pods_Backpack_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +466,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2E474C023A7BD6B00DA5DA7 /* UITestUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +487,7 @@
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
+				D2E474AB23A7BCDB00DA5DA7 /* UITestServer.xcodeproj */,
 				D29F9C47221B1B3200773A6D /* Utils */,
 				D6D81D60213FEEB90013BB96 /* SnapshotTests */,
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
@@ -628,14 +678,6 @@
 		D22FB970230C0E950023DC72 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D28F6B8123A1091D001A188F /* SkyscannerRelativeiOS-Black.ttf */,
-				D28F6B8323A1091D001A188F /* SkyscannerRelativeiOS-BlackItalic.ttf */,
-				D28F6B8523A1091D001A188F /* SkyscannerRelativeiOS-Bold.ttf */,
-				D28F6B8623A1091D001A188F /* SkyscannerRelativeiOS-BoldItalic.ttf */,
-				D28F6B8223A1091D001A188F /* SkyscannerRelativeiOS-Book.ttf */,
-				D28F6B8423A1091D001A188F /* SkyscannerRelativeiOS-Italic.ttf */,
-				D28F6B8723A1091D001A188F /* SkyscannerRelativeiOS-Medium.ttf */,
-				D28F6B8823A1091D001A188F /* SkyscannerRelativeiOS-MediumItalic.ttf */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -661,9 +703,28 @@
 			path = "CollectionView Headers";
 			sourceTree = "<group>";
 		};
+		D2E474AC23A7BCDB00DA5DA7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2E474B123A7BCDB00DA5DA7 /* UITestServer.framework */,
+				D2E474B323A7BCDB00DA5DA7 /* UITestServerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D2E474B523A7BCF100DA5DA7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2E474BA23A7BCF100DA5DA7 /* UITestUtils.framework */,
+				D2E474BC23A7BCF100DA5DA7 /* UITestUtilsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		D6517B40216DF5F800D85FF9 /* Backpack NativeUITests */ = {
 			isa = PBXGroup;
 			children = (
+				D2E474B423A7BCF100DA5DA7 /* UITestUtils.xcodeproj */,
 				D2E474A923A7B6E700DA5DA7 /* Screenshots.swift */,
 				D257C768236AE3FB006683F5 /* TextFieldUITest.swift */,
 				D257C767236AE3FB006683F5 /* TextViewUITest.swift */,
@@ -806,6 +867,7 @@
 				84EFE62BE1534CD46CAFBDBF /* [CP] Embed Pods Frameworks */,
 				D68AF8FA2174CB9C00BA743D /* Run Script */,
 				EFF4B5AAADA028B292046E74 /* [CP] Copy Pods Resources */,
+				D2E474BF23A7BD4A00DA5DA7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -915,6 +977,16 @@
 			mainGroup = 6003F581195388D10070C39A;
 			productRefGroup = 6003F58B195388D20070C39A /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D2E474AC23A7BCDB00DA5DA7 /* Products */;
+					ProjectRef = D2E474AB23A7BCDB00DA5DA7 /* UITestServer.xcodeproj */;
+				},
+				{
+					ProductGroup = D2E474B523A7BCF100DA5DA7 /* Products */;
+					ProjectRef = D2E474B423A7BCF100DA5DA7 /* UITestUtils.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				6003F589195388D20070C39A /* Backpack Native */,
@@ -925,19 +997,42 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		D2E474B123A7BCDB00DA5DA7 /* UITestServer.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = UITestServer.framework;
+			remoteRef = D2E474B023A7BCDB00DA5DA7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D2E474B323A7BCDB00DA5DA7 /* UITestServerTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UITestServerTests.xctest;
+			remoteRef = D2E474B223A7BCDB00DA5DA7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D2E474BA23A7BCF100DA5DA7 /* UITestUtils.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = UITestUtils.framework;
+			remoteRef = D2E474B923A7BCF100DA5DA7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D2E474BC23A7BCF100DA5DA7 /* UITestUtilsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = UITestUtilsTests.xctest;
+			remoteRef = D2E474BB23A7BCF100DA5DA7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		6003F588195388D20070C39A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D28F6B8D23A1091D001A188F /* SkyscannerRelativeiOS-Bold.ttf in Resources */,
-				D28F6B8A23A1091D001A188F /* SkyscannerRelativeiOS-Book.ttf in Resources */,
-				D28F6B8B23A1091D001A188F /* SkyscannerRelativeiOS-BlackItalic.ttf in Resources */,
-				D28F6B8F23A1091D001A188F /* SkyscannerRelativeiOS-Medium.ttf in Resources */,
-				D28F6B8C23A1091D001A188F /* SkyscannerRelativeiOS-Italic.ttf in Resources */,
-				D28F6B8E23A1091D001A188F /* SkyscannerRelativeiOS-BoldItalic.ttf in Resources */,
-				D28F6B8923A1091D001A188F /* SkyscannerRelativeiOS-Black.ttf in Resources */,
-				D28F6B9023A1091D001A188F /* SkyscannerRelativeiOS-MediumItalic.ttf in Resources */,
 				D6D6BB6421958C3200312C1C /* Gradients.storyboard in Resources */,
 				D24D602B22F84CEC002847D1 /* TextField.storyboard in Resources */,
 				60CE0F9B2189FC5000309211 /* Switches.storyboard in Resources */,
