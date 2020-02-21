@@ -197,12 +197,8 @@ NS_ASSUME_NONNULL_BEGIN
     }
 
     NSCalendar *cal = [NSCalendar currentCalendar];
-    NSDate *date1 = [cal startOfDayForDate: self.date1];
-    NSDate *date2 = [cal startOfDayForDate:date];
-    NSDateComponents *components = [cal components:NSCalendarUnitDay
-                                               fromDate:date1
-                                                 toDate:date2
-                                                options:0];
+    NSDate *calendarDate = [cal startOfDayForDate:date];
+    NSDateComponents *components = [cal components:NSCalendarUnitDay fromDate:calendarDate];
 
     if (components.day == 2 || components.day == 8 || components.day == 12 || components.day == 20) {
         return BPKColor.glencoe;

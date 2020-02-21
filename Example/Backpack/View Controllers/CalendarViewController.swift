@@ -87,9 +87,8 @@ class CalendarViewController: UIViewController, CalendarDelegate {
         }
 
         let calendar = Calendar.current
-        let date1 = calendar.startOfDay(for: Date())
-        let date2 = calendar.startOfDay(for: date)
-        let components = calendar.dateComponents([.day], from: date1, to: date2)
+        let calendarDate = calendar.startOfDay(for: date)
+        let components = calendar.dateComponents([.day], from: calendarDate)
         guard let daysCount = components.day else { return Color.clear }
 
         if daysCount == 2 || daysCount == 8 || daysCount == 12 || daysCount == 20 {
@@ -113,9 +112,8 @@ class CalendarViewController: UIViewController, CalendarDelegate {
         }
 
         let calendar = Calendar.current
-        let date1 = calendar.startOfDay(for: Date())
-        let date2 = calendar.startOfDay(for: date)
-        let components = calendar.dateComponents([.day], from: date1, to: date2)
+        let calendarDate = calendar.startOfDay(for: date)
+        let components = calendar.dateComponents([.day], from: calendarDate)
         guard let daysCount = components.day else { return Color.textPrimaryColor }
 
         if daysCount == 2 || daysCount == 8 || daysCount == 12 || daysCount == 20 ||
