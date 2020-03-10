@@ -25,6 +25,7 @@ class HorizontalNavViewController: UIViewController, BPKTappableLinkLabelDelegat
     var size: BPKHorizontalNavigationSize = .default
     var showBar: Bool = true
     var showIcons: Bool = false
+    var showIndicators: Bool = false
     var wide: Bool = false
     var showExtraContent = false
 
@@ -49,6 +50,14 @@ class HorizontalNavViewController: UIViewController, BPKTappableLinkLabelDelegat
             horizontalNav.options += [
                 BPKHorizontalNavigationOption(name: "Flights", tag: 0),
                 BPKHorizontalNavigationOption(name: "Hotels", tag: 1),
+                BPKHorizontalNavigationOption(name: "Car hire", tag: 2)
+            ]
+        }
+
+        if showIndicators {
+            horizontalNav.options = [
+                BPKHorizontalNavigationOption(name: "Flights", tag: 0, indicatorText: ""),
+                BPKHorizontalNavigationOption(name: "Hotels", tag: 1, indicatorText: "99+"),
                 BPKHorizontalNavigationOption(name: "Car hire", tag: 2)
             ]
         }

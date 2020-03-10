@@ -75,6 +75,19 @@ NS_ASSUME_NONNULL_BEGIN
     return self;
 }
 
+- (instancetype)initWithName:(NSString *)name iconName:(BPKIconName)iconName tag:(NSInteger)tag indicatorText:(NSString *_Nullable)indicatorText {
+    self = [super init];
+
+    if (self) {
+        self.tag = tag;
+        self.name = name;
+        self.iconName = iconName;
+        self.indicatorText = indicatorText;
+    }
+
+    return self;
+}
+
 - (BOOL)hasIcon {
     return self.iconName != nil;
 }

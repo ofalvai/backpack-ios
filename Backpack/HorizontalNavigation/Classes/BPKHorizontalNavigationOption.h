@@ -51,6 +51,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, readonly) BOOL hasIcon;
 
 /**
+ * Displays an indicator on the badge with optional number/text inside.
+ * If the string is nil, the indicator will not be shown.
+ */
+@property(nonatomic, nullable) NSString *indicatorText;
+
+/**
  * Intialize an option with a given name.
  *
  * @param name The name of the option.
@@ -66,6 +72,16 @@ NS_ASSUME_NONNULL_BEGIN
 * @return A named option with a tag.
 */
 - (instancetype)initWithName:(NSString *)name tag:(NSInteger)tag;
+
+/**
+* Intialize an option with a given name and tag.
+*
+* @param name The name of the option.
+* @param tag The tag of the option.
+* @param indicatorText The text to show in the indicator.
+* @return A named option with a tag.
+*/
+- (instancetype)initWithName:(NSString *)name tag:(NSInteger)tag indicatorText:(NSString *_Nullable)indicatorText;
 
 /**
 * Intialize an option with a given name and icon.

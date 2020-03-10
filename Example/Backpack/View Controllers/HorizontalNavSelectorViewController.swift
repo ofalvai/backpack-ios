@@ -26,6 +26,7 @@ enum HorizontalNavSegueIdentifier: String {
     case icons = "Icons"
     case smallIcons = "iconsSmall"
     case wide = "Wide"
+    case indicators = "Indicators"
     case showExtraContent = "withScroll"
 }
 
@@ -56,6 +57,10 @@ class HorizontalNavSelectorViewController: UITableViewController {
                 maybeHorizontalNavController?.size = .small
                 maybeHorizontalNavController?.showIcons = true
                 maybeHorizontalNavController?.wide = true
+            case .indicators:
+                segue.destination.title = "Indicators"
+                maybeHorizontalNavController?.showIndicators = true
+                maybeHorizontalNavController?.showIcons = true
             case .showExtraContent:
                 segue.destination.title = "With scroll"
                 maybeHorizontalNavController?.showIcons = true
