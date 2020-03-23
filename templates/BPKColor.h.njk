@@ -31,7 +31,15 @@ NS_SWIFT_NAME(Color) @interface BPKColor : NSObject
 ///-----------------------
 /// @name Colors
 ///-----------------------
-{% for c in color %}
+{% for c in undefinedColor %}
+/**
+ * The `{{c.name}}` color from the Backpack palette - rgb({{c.value.r255}}, {{c.value.g255}}, {{c.value.b255}}).
+ *
+ * <div style="width: 100px; height: 100px; background: {{c.hex}}; box-shadow: 0px 1px 3px 0px rgba(37,32,31,.3); border-radius: 6px;"></div>
+*/
+@property(nonatomic, class, readonly) UIColor * {{c.name}}{{" __deprecated" if c.deprecated}};
+{% endfor %}
+{% for c in definedColor %}
 /**
  * The `{{c.name}}` color from the Backpack palette - rgb({{c.value.r255}}, {{c.value.g255}}, {{c.value.b255}}).
  *

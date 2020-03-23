@@ -212,19 +212,40 @@ const parseTokens = tokensData => {
     )
     .value();
 
-  const colors = _.chain(tokensData.properties)
+  const nonDynamicColors = _.chain(tokensData.properties)
     .filter(entity => entity.type === 'color' && !isDynamicColor(entity))
-    .map(({ value, name, ...rest }) => {
-      const newName = name.replace('color', '');
+    .value();
+  const undefinedColors = [];
+  const definedColors = [];
+  nonDynamicColors.forEach(({ value, originalValue, name, type, ...rest }) => {
+    const newName = name.replace('color', '');
+    const undefinedColorsWithSameValue = undefinedColors.filter(
+      uc => uc.originalValue === originalValue,
+    );
 
-      return {
+    if (undefinedColorsWithSameValue.length < 1) {
+      // add to undefinedColors
+      undefinedColors.push({
         value: parseColor(value),
+        originalValue,
         name: newName[0].toLowerCase() + newName.slice(1),
         hex: value.toString(),
+        type: 'undefinedColor',
         ...rest,
-      };
-    })
-    .value();
+      });
+    } else {
+      // add to definedColors
+      definedColors.push({
+        value: parseColor(value),
+        originalValue,
+        reference: undefinedColorsWithSameValue[0].name,
+        name: newName[0].toLowerCase() + newName.slice(1),
+        hex: value.toString(),
+        type: 'definedColor',
+        ...rest,
+      });
+    }
+  });
 
   const durations = _.chain(tokensData.properties)
     .filter(({ type }) => type === 'duration')
@@ -428,7 +449,8 @@ const parseTokens = tokensData => {
 
   return _.chain([
     ...dynamicColors,
-    ...colors,
+    ...definedColors,
+    ...undefinedColors,
     ...fonts,
     ...spacings,
     ...radii,
